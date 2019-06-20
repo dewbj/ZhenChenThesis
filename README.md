@@ -26,16 +26,16 @@ Set label `Outer`: establish_14-2.cypher
 
 Set label `Inner`: establish_14-3.cypher
 
-Create Normal group simulated patient nodes: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_create_1.cypher
+Create Normal group simulated patient nodes: simulation_create_1.cypher
 
-Create Noise group simulated patient nodes: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_create_2.cypher
+Create Noise group simulated patient nodes: simulation_create_2.cypher
 
-Create Phenotypic group simulated patient nodes: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_create_3.cypher
+Create Phenotypic group simulated patient nodes: simulation_create_3.cypher
 
-Set simulation testing result to patient nodes: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_result_1.cypher
+Set simulation testing result to patient nodes: simulation_result_1.cypher
 
-Calculate HPO count distribution: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_count_1.cypher
+Calculate HPO count distribution: simulation_count_1.cypher
 
-Calculate Top20 error count: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_Top20_1.cypher
+Calculate Top20 error count: simulation_Top20_1.cypher
 
-Return stacked simulation testing result: C:\Users\dewbj\Documents\GitHub\ZhenChenThesis\simulation_result_2.cypher
+Return stacked simulation testing result: simulation_result_2.cypher
