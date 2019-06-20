@@ -1,0 +1,2 @@
+//12-2. Set original-disease-hpo relationship counts to disease
+call apoc.periodic.iterate('match p=(d:Disease)-[r]->(h:HPO) where not exists(r.source) return d.DisorderName as Disease, count(distinct p) as Ori_DH_rel','match (d:Disease) where d.DisorderName = Disease set d.Ori_DH_rel = Ori_DH_rel', {batchSize:1,parallel:False})

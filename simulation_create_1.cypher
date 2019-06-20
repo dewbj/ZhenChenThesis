@@ -1,0 +1,2 @@
+//*Creates 1000 simulated patients with uuid, random disease, random HPO set contained
+call apoc.periodic.iterate('call apoc.create.uuids(1000) yield uuid with uuid match (d:Disease) return collect(d.DisorderName) as Diseases, uuid','create (p:Patient:Test_I1 {uuid:uuid}) set p.DisorderName = apoc.coll.randomItem(Diseases) with p match(d:Disease)-[:Phenotype]->(h:HPO) where d.DisorderName = p.DisorderName with collect(h.HPO_Term_Name) as HPOs, p set p.HPO_Term_Name = apoc.coll.randomItems(HPOs, apoc.coll.randomItem(range(1,10)))', {batchSize:1,parallel:false})

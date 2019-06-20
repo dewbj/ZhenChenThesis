@@ -1,0 +1,2 @@
+//12-1. Set all-disease-hpo relationship counts to disease
+call apoc.periodic.iterate('match p=(d:Disease)-->(h:HPO) return d.DisorderName as Disease, count(distinct p) as All_DH_rel','match (d:Disease) where d.DisorderName = Disease set d.All_DH_rel = All_DH_rel', {batchSize:1,parallel:False})

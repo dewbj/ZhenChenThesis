@@ -1,0 +1,2 @@
+//14-1. Set label `Phenotypic abnomality` to HPO nodes with equal or lower level of HPO node Phenotypic abnomality
+match(h:HPO)<-[:is_a*0..]-(y:HPO) where h.HPO_Term_Name = 'Phenotypic abnormality' with distinct y set y:`Phenotypic abnomality` return y.HPO_Term_Name as `Phenotypic abnomality` order by `Phenotypic abnomality`
