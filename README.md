@@ -39,3 +39,7 @@ Calculate HPO count distribution: simulation_count_1.cypher
 Calculate `Top20` error count: simulation_Top20_1.cypher
 
 Return stacked simulation testing result: simulation_result_2.cypher
+
+DPR(Disease-Phenotype Relationships): DPR.csv
+
+PDR(Phenotype-Disease Relationships): PDR.csv
