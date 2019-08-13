@@ -1,9 +1,8 @@
 # use Encode;
 # use Encode::Encoder;
 
-my $input = '<C:\Users\dewbj\.Neo4jDesktop\neo4jDatabases\database-00bf3035-556e-44e6-aec2-d324a90669bf\installation-3.4.8\import\en_product4_HPO.xml';
-# my $input = 'C:\Users\dewbj\.Neo4jDesktop\neo4jDatabases\database-00bf3035-556e-44e6-aec2-d324a90669bf\installation-3.4.8\import\test.xml';
-my $output = '>C:\Users\dewbj\.Neo4jDesktop\neo4jDatabases\database-00bf3035-556e-44e6-aec2-d324a90669bf\installation-3.4.8\import\en_product4_HPO.json';
+my $input = '<C:\Users\dewbj\.Neo4jDesktop\neo4jDatabases\database-346d94e0-07e1-41ff-b4ce-82f4a5091cbb\installation-3.5.2\import\en_product4_HPO.xml';
+my $output = '>C:\Users\dewbj\.Neo4jDesktop\neo4jDatabases\database-346d94e0-07e1-41ff-b4ce-82f4a5091cbb\installation-3.5.2\import\en_product4_HPO.json';
 
 # $input = Encode::encode("UTF-8",Encode:decode("Latin1",$input));
 # $input = decode("iso-8859-1",$input);
@@ -49,7 +48,7 @@ while (my $line = <INFILE>) {
 	# elsif ($line =~ /^\s{12}\<OrphaNumber\>(\d+)\<\/OrphaNumber\>/){
 		# push @freqId, $1;
 	# }
-	elsif ($line =~ /^\s{12}\<Name lang\=\"en\"\>(.+)\<\/Name\>/){
+	elsif ($line =~ /^\s{12}\<Name lang\=\"en\"\>(.+%\))\<\/Name\>/){
 		push @freqName, $1;
 	}
 	elsif ($line =~ /^\s{4}\<\/Disorder\>/){
